@@ -10,6 +10,6 @@ jobs:
       - run: 
           pip install awscli --upgrade --user;
           export PATH=$PATH:~/.local/bin;
-          eval $(aws ecr get-login --region us-west-1 --no-include-email);
-          docker build -t 293713961925.dkr.ecr.us-west-1.amazonaws.com/nginx:latest .;
-          docker push 293713961925.dkr.ecr.us-west-1.amazonaws.com/nginx:latest
+          eval $(aws ecr get-login --region us-east-2 --no-include-email);
+          docker build -t 866624549710.dkr.ecr.us-east-2.amazonaws.com/nginx:latest .;
+          docker push 866624549710.dkr.ecr.us-east-2.amazonaws.com/nginx:latest
