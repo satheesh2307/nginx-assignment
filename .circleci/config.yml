@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: docker:1.13.1-git
+    working_directory: ~/my_app
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run: 
+          TAG=293713961925.dkr.ecr.us-west-1.amazonaws.com/nginx:latest
+          docker build -t $TAG .
+          docker push $TAG
