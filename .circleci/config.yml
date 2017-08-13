@@ -8,7 +8,7 @@ jobs:
       - checkout
       - setup_remote_docker
       - run: 
-          
+          sudo apt-get install awscli
           TAG=293713961925.dkr.ecr.us-west-1.amazonaws.com/nginx:latest;
           docker build -t $TAG .;
           aws ecr get-login --no-include-email --region us-west-1;
