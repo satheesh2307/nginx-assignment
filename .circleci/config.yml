@@ -8,5 +8,6 @@ jobs:
       - checkout
       - setup_remote_docker
       - run: 
-          docker build -t 293713961925.dkr.ecr.us-west-1.amazonaws.com/nginx:latest .
+          TAG=293713961925.dkr.ecr.us-west-1.amazonaws.com/nginx:latest;
+          docker build -t 293713961925.dkr.ecr.us-west-1.amazonaws.com/nginx:latest .;
           docker push $TAG
