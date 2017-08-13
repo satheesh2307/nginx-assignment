@@ -10,6 +10,6 @@ jobs:
       - run: 
           sudo apt-get install awscli
           TAG=293713961925.dkr.ecr.us-west-1.amazonaws.com/nginx:latest;
-          docker build -t $TAG .;
+          docker build -t 293713961925.dkr.ecr.us-west-1.amazonaws.com/nginx:latest .;
           aws ecr get-login --no-include-email --region us-west-1;
           docker push $TAG
