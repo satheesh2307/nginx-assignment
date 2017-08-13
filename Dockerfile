@@ -1,5 +1,6 @@
 FROM nginx:alpine
 MAINTAINER satheesh.prabu@gmail.com
-ADD index.html /usr/share/nginx/html/docs/index.html
-ADD docs.conf /etc/nginx/conf.d/
+ADD docs /usr/share/nginx/docs
+ADD docsconf /etc/nginx/conf.d/
+ADD default.conf /etc/nginx/conf.d/
 EXPOSE 80
